@@ -1,0 +1,30 @@
+ALGORITHM Counter
+VAR
+    cptC,cptW,cptV: INTEGER;
+    /* 
+    cptC denotes number of characters
+    cptW denotes number of words
+    cptV denotes vowel number
+   */
+    cptC :=0; cptW :=1; cptV :=0;
+    C: CHAR:="";
+BEGIN
+   
+    WHILE (C<>'.') DO
+    Write('give a character')
+    Read(C)
+    IF (C :=' ') THEN
+        cptC :=cptC+1;
+        cptW :=cptW+1;
+    ELSE_IF (C in [a,e,i,o,u]) THEN
+        cptC :=cptC+1;
+        cptV :=cptV+1;
+    ELSE
+        cptC :=cptC+1;
+    END_IF
+    END_WHILE
+   Write(cptC)
+   Write(cptW)
+   Write(cptV)
+END
+ 
